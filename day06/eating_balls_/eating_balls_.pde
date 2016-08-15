@@ -1,7 +1,7 @@
-int numBalls = 1000; 
+int numBalls = 100; 
 int buffer = 10; 
 
-int ballSize = 2; 
+int ballSize; 
 int eatRadius= 50; 
 
 
@@ -25,8 +25,8 @@ void setup() {
     ballsX[i]= int(random(buffer, width- buffer)); 
     ballsY[i]= int(random(buffer, height- buffer)); 
     
-    speedX[i] = int(random(-5,5)); 
-    speedY[i] = int(random(-5,5)); 
+    speedX[i] = int(random(-.1,.1)); 
+    speedY[i] = int(random(-.1,.1)); 
     
     if(speedX[i] ==0){
       speedX[i]=1;
@@ -34,6 +34,7 @@ void setup() {
      if(speedX[i] ==0){
       speedY[i]=1;
     }
+    ballSize = int(random(5,10)); 
     radii[i] = ballSize; 
     baseColor[i] = color(0, int(random(100, 255)), 0); 
     opacity[i] =255; 

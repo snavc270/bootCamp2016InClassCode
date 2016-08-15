@@ -113,7 +113,7 @@ class Particle {
     b = c + 40;
     
     noStroke();
-    fill(r,g,b);
+v    fill(r,g,b);
    
     //making size depend on the speed
     if(abs(xspeed) > abs(yspeed)){
